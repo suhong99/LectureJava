@@ -56,7 +56,7 @@ public class MainClass {
 		
 		//문자열 -> 숫자
 		strNumber = "1010";
-		int rnum=Integer.parseInt(strNumber, 2);
+		int rnum=Integer.(strNumber, 2);
 		System.out.println(rnum);
 		
 		
@@ -164,7 +164,7 @@ public class MainClass {
 		System.out.println("2진수  -> 10진수 :  "+num2String + " -> "+ num2);
 		System.out.println("16진수  -> 10진수 :  "+num16String + " -> "+ num16);
 
-		
+																				
 
 
 

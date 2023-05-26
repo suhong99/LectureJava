@@ -64,11 +64,11 @@ public class MainClass {
 //	}
 		
 		Scanner sc= new Scanner(System.in);
-        int[] numbers = new int[10];
+        int numbers[]  = new int[10];
         int count=0;
 		//10개의 숫자를 입력을 받아 배열을 넣고 최대 값을 구하시오
         while (count < 10) {
-            System.out.print("입력값 : ");
+            System.out.print( (count+1) +"번째 입력값 : ");
             numbers[count] = sc.nextInt();
             count++;
         }
