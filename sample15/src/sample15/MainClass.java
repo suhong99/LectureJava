@@ -54,7 +54,7 @@ public class MainClass {
         int count= 0;
        
 		while(count<numbers.length) {
-			System.out.print((count+1)+ "번째 숫자를 입력해주세요 : ");
+			System.out.println((count+1)+ "번째 숫자를 입력해주세요 : ");
 			int input = sc.nextInt();
 			if(input <0) {
 				System.out.println("양수를 입력해주세요");
