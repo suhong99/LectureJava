@@ -56,7 +56,7 @@ public class MainClass {
 		
 		//문자열 -> 숫자
 		strNumber = "1010";
-		int rnum=Integer.(strNumber, 2);
+		int rnum=Integer.parseInt(strNumber, 2);
 		System.out.println(rnum);
 		
 		
