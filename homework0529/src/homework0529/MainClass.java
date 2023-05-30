@@ -72,6 +72,26 @@ public class MainClass {
 		}
 		return answer;
 	}
+	//4강사님
+	static boolean isNumber2(String str) {
+		if(str == null || str.length() == 0) {
+			return false;
+		}
+		
+		boolean b = true;
+		for (int i=0;i<str.length(); i++) {
+			char c= str.charAt(i);
+//			System.out.println(c);
+			int ascii = (int)c;//아스키 코드로 변경
+			if(ascii < 48 || ascii > 57) {
+				b=false;
+				return false;
+			}
+		}
+		
+		
+		return true;
+	}
 	
 	//5번
 	static void getDouble(int[] arr) {
