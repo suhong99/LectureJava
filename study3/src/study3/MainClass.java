@@ -13,6 +13,7 @@ public class MainClass {
 		for(int i = 0;i<number.length; i++) {
 			System.out.println(number[i]+": 총점");
 		}
+		
 		stu[0]=new Student(1,"홍길동",24,90,80);
 	}
 }

@@ -9,12 +9,18 @@
     <fullyQualifiedTypeName name="homework0529.MainClass"/>
     <fullyQualifiedTypeName name="sample24.MyClass"/>
     <fullyQualifiedTypeName name="sample26.Sorting"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="mycls.MyClass"/>
     <fullyQualifiedTypeName name="sample29.MyClass"/>
     <fullyQualifiedTypeName name="sample30.MyClass"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="student.student"/>
     <fullyQualifiedTypeName name="student.Student"/>
+    <fullyQualifiedTypeName name="study3.Student"/>
+    <fullyQualifiedTypeName name="sample33.Snake"/>
+    <fullyQualifiedTypeName name="Player"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="cls.Human"/>
+    <fullyQualifiedTypeName name="cls.Pitcher"/>
+    <fullyQualifiedTypeName name="cls.Batter"/>
 </qualifiedTypeNameHistroy>
