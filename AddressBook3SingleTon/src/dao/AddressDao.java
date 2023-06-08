@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import dto.AddressDto;
+import singleton.Singleton;
 
 // DAO(Data Access Object)
 public class AddressDao {
@@ -23,12 +24,12 @@ public class AddressDao {
 	private AddressDto addressBook[] = new AddressDto[COUNT];
 	private int counter; 
 	*/
-	private List<AddressDto> addressList = null;
+//	private List<AddressDto> addressList = null;
 	
 	public AddressDao() {		
 	//	counter = 0;
 		
-		addressList = new ArrayList<AddressDto>();
+//		addressList = new ArrayList<AddressDto>();
 	}
 	
 	public void insert() {
@@ -61,8 +62,9 @@ public class AddressDao {
 		
 	//	addressBook[counter] = new AddressDto(name, age, phone, address, memo);
 	//	counter++;
-					
-		addressList.add(new AddressDto(name, age, phone, address, memo));		
+			
+		Singleton s = Singleton.getInstance();
+		s.addressList.add(new AddressDto(name, age, phone, address, memo));		
 	}
 	
 	public void delete() {	// 24 -> 0	"홍길동" -> ""
@@ -88,15 +90,8 @@ public class AddressDao {
 			System.out.println("지인정보를 찾을 수 없습니다");
 		}else {
 			// 삭제
-			/*
-			addressBook[index].setName("");
-			addressBook[index].setAge(0);
-			addressBook[index].setPhone("");
-			addressBook[index].setAddress("");
-			addressBook[index].setMemo("");
-			*/
-			// addressBook[index] = null;
-			addressList.remove(index);
+			Singleton s = Singleton.getInstance();
+			s.addressList.remove(index);
 			
 			System.out.println("지인정보를 삭제했습니다");
 		}
@@ -115,10 +110,11 @@ public class AddressDao {
 			}
 		}
 		*/
+		Singleton s = Singleton.getInstance();
 		
 		List<AddressDto> findNameList = new ArrayList<AddressDto>();		
-		for (int i = 0; i < addressList.size(); i++) {
-			AddressDto dto = addressList.get(i);
+		for (int i = 0; i < s.addressList.size(); i++) {
+			AddressDto dto = s.addressList.get(i);
 			if(name.equals(dto.getName())) {
 				findNameList.add(dto);
 			}
@@ -165,11 +161,13 @@ public class AddressDao {
 //		addressList.get(index).setAddress(address);
 //		addressList.get(index).setMemo(memo);
 		
-		AddressDto dto = addressList.get(index);
+		Singleton s = Singleton.getInstance();
+		
+		AddressDto dto = s.addressList.get(index);
 		dto.setPhone(phone);
 		dto.setAddress(address);
 		dto.setMemo(memo);
-		
+				
 		System.out.println("수정을 완료했습니다");
 	}
 	
@@ -185,10 +183,11 @@ public class AddressDao {
 			}
 		}
 		*/
+		Singleton s = Singleton.getInstance();
 		
 		int index = -1;
-		for (int i = 0; i < addressList.size(); i++) {
-			AddressDto dto = addressList.get(i);
+		for (int i = 0; i < s.addressList.size(); i++) {
+			AddressDto dto = s.addressList.get(i);
 			if(name.equals(dto.getName())) {
 				index = i;
 				break;
@@ -214,13 +213,15 @@ public class AddressDao {
 			}
 		}*/
 		
-		if(addressList.isEmpty()) {	// addressList.size() == 0
+		Singleton s = Singleton.getInstance();
+		
+		if(s.addressList.isEmpty()) {	// addressList.size() == 0
 			System.out.println("데이터 없습니다");
 			return;
 		}
 		
-		for (int i = 0; i < addressList.size(); i++) {
-			System.out.println(addressList.get(i).toString());
+		for (int i = 0; i < s.addressList.size(); i++) {
+			System.out.println(s.addressList.get(i).toString());
 		}
 		
 	}
