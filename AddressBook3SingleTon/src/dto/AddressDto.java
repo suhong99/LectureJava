@@ -23,12 +23,7 @@ public class AddressDto {
 		this.memo = memo;
 	}
 	
-	public AddressDto(String phone, String address, String memo) {
-		super();
-		this.phone = phone;
-		this.address = address;
-		this.memo = memo;
-	}
+
 
 	public String getName() {
 		return name;

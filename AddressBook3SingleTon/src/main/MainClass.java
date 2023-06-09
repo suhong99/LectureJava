@@ -50,6 +50,9 @@ public class MainClass {
 				case 6:
 					fp.write();
 					break;
+				case 7 : 
+					System.out.println("프로그램을 종료하겠습니다");
+					return;
 			}			
 		}	
 	}

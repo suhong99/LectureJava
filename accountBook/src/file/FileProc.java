@@ -9,7 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import dto.AddressDto;
+import dto.AccountDto;
 import singleton.Singleton;
 
 public class FileProc {
@@ -37,8 +37,8 @@ public class FileProc {
 		try {
 			PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
 			
-			for (int i = 0; i < s.addressList.size(); i++) {
-				AddressDto dto = s.addressList.get(i); 
+			for (int i = 0; i < s.accountList.size(); i++) {
+				AccountDto dto = s.accountList.get(i); 
 				pw.println(dto.print());
 			}
 			
@@ -60,21 +60,12 @@ public class FileProc {
 			
 			String str = "";
 			while((str = br.readLine()) != null) {				
-			//	System.out.println(str);
 				
 				String split[] = str.split("-");
-				// split[0] : 이름
-				// split[1] : 나이 -> int
-				// split[2] : 전화번호
-				// split[3] : 주소
-				// split[4] : 메모
-				
-				AddressDto dto = new AddressDto(split[0], 
-												Integer.parseInt(split[1]), 
-												split[2], 
-												split[3], 
-												split[4]);				
-				s.addressList.add(dto);
+			
+				AccountDto dto = new AccountDto( Integer.parseInt(split[0]), split[1], split[2], Integer.parseInt(split[3]), split[4]);
+					
+				s.accountList.add(dto);
 			}			
 			
 		} catch (FileNotFoundException e) {			
