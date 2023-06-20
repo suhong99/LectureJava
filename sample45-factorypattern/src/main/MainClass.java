@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import animal.Animal;
+import animal.Cat;
 import animal.Cow;
 import animal.Dog;
 import factory.AnimalFactory;
